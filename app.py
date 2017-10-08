@@ -115,7 +115,6 @@ app.layout = html.Div([
         id='student_attendance',
         figure={
             'data': student_graphs,
-            'colorscale': ,
             'layout': {
                 'title': 'Student check-in check-out difference'
             }
