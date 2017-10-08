@@ -111,24 +111,24 @@ server = app.server
 
 app.layout = html.Div([
     html.H1(children = "STAY PRESENT", style = {'textAlign': 'center', "size": '75'}),
-    html.Div(
+    html.Div([
         html.P("Use this application to monitor your student's device usage during class based on their communications\
-            with routers installed right in your classroom/lecture hall!"),
+            with WiFi routers installed right in your classroom/lecture hall!"),
         html.P("If it is presumed that students use their phones right before and right after a lecture, \
             the time where students check in and out of a wireless internet server in the proximity of the \
             lecture hall can be a good indicator that they are present throughout a lecture. Students that do \
             not even have their devices checked in at all could be considered absent (Or without an internet-enabled \
             device) as shown below. These are shown in the first 3 charts."),
         html.P("With a presence of internet-enabled device, there are also worries that students may not \
-            be as engaged in class, engaging in whatever Snaphat-Insta-Facebook activity possible n \
-            their devices. The bottom half of the page shows metrics on what sort of activities send the most information \
+            be as engaged in class, engaging in whatever Snaphat-Insta-Facebook activity possible on \
+            their devices. The bottom half of the page shows metrics on what sort of websites send the most information \
             to your students (Pie Chart 2), engage most of your device-using students (Pie Chart 1), and \
             demand the most information from your students (Pie Chart 3. May or may not be correlated with student distractedness). \
             Along with those, we present a grouped bar chart of the tradeoff between information sent and received for Popular \
             websites your students interact with. Finally, we have a time series of the number of your students actually interacting \
             with certain popular websites during class time...\
             ")
-        ),
+        ]),
     dcc.Graph(
         id='student_attendance',
         figure={
@@ -191,7 +191,7 @@ app.layout = html.Div([
                         )
                     ],
                     'layout': {
-                        'title': 'Which Sites are your Students Sending the Most Information To??'
+                        'title': 'Which Sites are your Students Sending the Most Information to??'
                     }
                 }
             )
