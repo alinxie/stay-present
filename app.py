@@ -24,19 +24,19 @@ import pandas as pd
 
 client = MongoClient("mongodb://andrew:linxie@ds044689.mlab.com:44689/meraki")
 df = pd.DataFrame(list(client.meraki.data.find()))
-print(df.to_string())
+#print(df.to_string())
 # df = df.groupby(['application'])['numClients'].sum()
 df_agg = df.groupby('application')['numClients','recv','sent'].sum().reset_index()
 df_agg = df_agg[df_agg.application != "Miscellaneous secure web"]
 df_agg = df_agg[df_agg.application != "Miscellaneous web"]
 
-print(df.head)
+#print(df.head)
 df_agg_num = df_agg.sort_values('numClients', ascending = False)
-print(df_agg_num.head)
+#print(df_agg_num.head)
 df_agg_rec = df_agg.sort_values('recv', ascending = False)
 df_agg_sent = df_agg.sort_values('sent', ascending = False)
 top_sites = df_agg_num['application'][:10]
-print(top_sites.iloc[0])
+#print(top_sites.iloc[0])
 for index, row in df.iterrows():
     df.at[index, '_id'] = row['_id'].generation_time.astimezone(timezone('US/Pacific'))
 time_stamps = df['_id'].unique()
@@ -116,7 +116,7 @@ app.layout = html.Div([
         figure={
             'data': student_graphs,
             'layout': {
-                'title': 'Student check-in check-out difference'
+                'title': 'Student check-in check-out difference (In Seconds)'
             }
         }
     ),

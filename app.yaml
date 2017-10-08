@@ -10,4 +10,4 @@ handlers:
 - url: .*
   script: app.app
 
-entrypoint: gunicorn app:server
+entrypoint: gunicorn -t 100000 app:server
