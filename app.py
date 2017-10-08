@@ -219,7 +219,7 @@ app.layout = html.Div([
         style={'height': 800, 'width': '100%'},
         figure = { 'data': datas,
             'layout': {
-                'title': 'Number of Students accessing Certain Websites Over Time'
+                'title': 'Number of Students accessing Popular Websites Over Time'
             }
 
         }
