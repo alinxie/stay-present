@@ -119,9 +119,11 @@ app.layout = html.Div([
             lecture hall can be a good indicator that they are present throughout a lecture. Students that do \
             not even have their devices checked in at all could be considered absent (Or without an internet-enabled \
             device) as shown below. These are shown in the first 3 charts."),
-        html.P("With a presence of internet-enabled device, there are also worries that students may not \
-            be as engaged in class, engaging in whatever Snaphat-Insta-Facebook activity possible on \
-            their devices. The bottom half of the page shows metrics on what sort of websites send the most information \
+        html.P("Although the communication of students' devices with a WiFi network can be a good indicator of physical presence, \
+            we know that educators everywhere want to make sure that students are actually mentally present instead of actively engaging \
+            with all the Snapchat-Insta-Facebook like activity possible on \
+            their devices. Therefore we have also provided data on the sort of online websites your students interact with whilst they are in class. \
+            The bottom half of the page shows metrics on what sort of websites send the most information \
             to your students (Pie Chart 2), engage most of your device-using students (Pie Chart 1), and \
             demand the most information from your students (Pie Chart 3. May or may not be correlated with student distractedness). \
             Along with those, we present a grouped bar chart of the tradeoff between information sent and received for Popular \
