@@ -1,0 +1,4 @@
+runtime: python3
+api_version: 1
+
+entrypoint: gunicorn app:server
